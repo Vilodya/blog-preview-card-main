@@ -68,9 +68,88 @@ img {
   justify-content: center;
   align-items: center;
   background-color: var(--yellow);
+}
+
+.card {
+  max-width: 384px;
+  border: 1px solid var(--gray-950);
+  border-radius: 20px;
+  padding: var(--spacing-300);
+  box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+  color: var(--gray-950);
+  background-color: var(--white);
+}
+
+.card__image-wrapper {
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card__image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.card__content {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--spacing-150);
+  margin-top: var(--spacing-300);
+}
+
+.card__tag {
+  display: inline-block;
+  justify-self: start;
+  border-radius: 4px;
+  padding: var(--spacing-50) var(--spacing-150);
+  font-weight: 800;
+  font-size: 14px;
+  background-color: var(--yellow);
   line-height: 150%;
 }
 
+.card__date {
+  font-size: 14px;
+}
+
+.card__title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 150%;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.card__title:hover {
+  color: var(--yellow);
+}
+
+.card__text {
+  color: var(--gray-500);
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.card__author {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-150);
+  margin-top: var(--spacing-300);
+}
+
+.card__author-avatar-wrapper {
+  width: 32px;
+  height: 32px;
+}
+
+.card__author-name {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 150%;
+}
 
 .attribution {
   padding: 24px;
@@ -80,4 +159,26 @@ img {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 767px) {
+  .card {
+    max-width: 327px;
+  }
+  
+  .card__tag {
+    font-size: 12px;
+  }
+  
+  .card__date {
+    font-size: 12px;
+  }
+  
+  .card__title {
+    font-size: 20px;
+  }
+  
+  .card__text {
+    font-size: 14px;
+  }
 }
